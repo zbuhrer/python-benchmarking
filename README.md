@@ -6,11 +6,54 @@ A collection of benchmarks exploring various aspects of Python performance. This
 
 This repository contains benchmarks for various Python operations, data structures, and programming patterns. Each benchmark is designed to provide clear, reproducible results that can guide practical development decisions.
 
+## Database System
+
+The project uses SQLite to store and track benchmark results. This enables:
+- Systematic collection of benchmark data
+- Historical performance tracking
+- Cross-environment result comparison
+- Data-driven performance analysis
+
+### Database Setup
+
+```sh
+# Initialize the database and create required tables
+python database.py
+```
+
+### Database Schema
+
+The database consists of two main tables:
+
+**benchmarks**
+- `id`: Primary key
+- `name`: Benchmark name
+- `category`: Category (e.g., "data-structures", "string-operations")
+- `description`: Detailed description of what is being tested
+- `script_path`: Path to the benchmark script
+
+**results**
+- `id`: Primary key
+- `benchmark_id`: Foreign key referencing benchmarks table
+- `timestamp`: When the benchmark was run
+- `execution_time`: Total execution time
+- `output`: Detailed benchmark results
+
+### Running Benchmarks
+
+```sh
+# Run all benchmarks and store results in database
+python run_benchmarks.py
+
+# Query and display results
+python query_results.py
+```
+
 ## Structure
 
 | Category | Status | Files |
 |----------|--------|-------|
-| 1-data-structures | Implemented | [List vs Tuple Access](results/1-data-structures/list-vs-tuple-access.md), [Dict vs List Membership](results/1-data-structures/dict-vs-list-membership.md), [Set vs List Membership](results/1-data-structures/set-vs-list-membership.md) |
+| 1-data-structures | Implemented | [List vs Tuple Access](benchmarks/results/1-data-structures/list-vs-tuple-access.md), [Dict vs List Membership](benchmarks/results/1-data-structures/dict-vs-list-membership.md), [Set vs List Membership](benchmarks/results/1-data-structures/set-vs-list-membership.md) |
 | 2-string-operations | In Progress | - concatenation_vs_join.py<br>- formatting_methods.py<br>- substring_search.py |
 | 3-function-calls | Planned | - |
 | 4-loops | Planned | - |
@@ -23,30 +66,32 @@ This repository contains benchmarks for various Python operations, data structur
 | 11-caching-lookup | Backlog | - |
 | 12-python-internals | Backlog | - |
 
-## Running Benchmarks
-
-```sh
-# Run a specific benchmark
-python benchmarks/category/benchmark-name.py
-```
-
-```sh
-# Example:
-python benchmarks/1-data-structures/list-vs-tuple-access.py
-```
-
 ## Results
 
-The results documented in this repository were collected on a standardized test environment. However, performance characteristics may vary across different hardware configurations and Python versions. Users are encouraged to run these benchmarks on their own systems to gather data specific to their environment.
-
-Future improvements to this project will include tools for collecting and comparing benchmark results across different machines and configurations, enabling more comprehensive performance analysis for specific use cases.
+Results are stored in the SQLite database and can be analyzed using the provided query tools. The system tracks:
+- Execution times across different runs
+- Performance variations between environments
+- Historical trends
 
 ### Result Configurations
 
 | Machine | CPU | RAM | Python Version | OS | Date | Notes |
 |---------|-----|-----|----------------|----|----|-------|
 |[Author](https://github.com/zbuhrer) | Apple M2 | 16 GB  | Python 3.12 | MacOS Sonoma Version 14.5 (23F79) | Feb 2025  | Initial Benchmarking |
-|         |     |     |                |    |    |       |
-|         |     |     |                |    |    |       |
 
-> **Note**: I would like to implement a database-driven solution to better track and compare results across different configurations. This will enable more sophisticated analysis and visualization of performance characteristics across environments.
+## Contributing
+
+When adding new benchmarks:
+1. Create a new benchmark script in the appropriate category directory
+2. Ensure the script outputs results in the expected format
+3. Run the benchmark using `run_benchmarks.py`
+4. Verify results are properly stored in the database
+5. Update documentation as needed
+
+## Future Improvements
+
+- Web interface for viewing and comparing results
+- Automated environment detection and logging
+- Statistical analysis of benchmark results
+- Performance visualization tools
+- Cross-version Python testing
