@@ -47,25 +47,3 @@ Size       List (s)   Tuple (s)  Ratio
 1000000    0.012593  0.012743  0.99x
 ```
 
-[Additional benchmarks results will be added as they are implemented]
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-## Guidelines for Adding New Benchmarks
-
-1. Create a new Python file in the appropriate category directory
-2. Include clear documentation within the code
-3. Ensure consistent output formatting
-4. Add results to this README
-5. Include analysis of the results
-
-## License
-
-[Add your chosen license]
-
-## Acknowledgments
-
-- Contributors
-- Resources and references used
