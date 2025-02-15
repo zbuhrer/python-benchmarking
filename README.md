@@ -77,7 +77,7 @@ Results are stored in the SQLite database and can be analyzed using the provided
 
 | Machine | CPU | RAM | Python Version | OS | Date | Notes |
 |---------|-----|-----|----------------|----|----|-------|
-|[Author](https://github.com/zbuhrer) | Apple M2 | 16 GB  | Python 3.12 | MacOS Sonoma Version 14.5 (23F79) | Feb 2025  | Initial Benchmarking |
+|[zbuyhrer](https://github.com/zbuhrer) | Apple M2 | 16 GB  | Python 3.12 | MacOS Sonoma Version 14.5 (23F79) | Feb 2025  | Initial Benchmarking |
 
 ## Contributing
 
