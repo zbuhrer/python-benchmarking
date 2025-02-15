@@ -10,40 +10,43 @@ This repository contains benchmarks for various Python operations, data structur
 
 | Category | Status | Files |
 |----------|--------|-------|
-| 1-data-structures | Implemented | - dict-vs-list-membership.py<br>- list-vs-tuple-access.py<br>- set-vs-list-membership.py |
-| 2-string-operations | Implemented | - concatenation_vs_join.py<br>- formatting_methods.py<br>- substring_search.py |
-| 3-function-calls | Empty | - |
-| 4-loops | Empty | - |
-| 5-imports | Empty | - |
-| 6-exception-handling | Empty | - |
-| 7-math-operations | Empty | - |
-| 8-sorting | Empty | - |
-| 9-io-operations | Empty | - |
-| 10-multithreading-async | Empty | - |
-| 11-caching-lookup | Empty | - |
-| 12-python-internals | Empty | - |
+| 1-data-structures | Implemented | [List vs Tuple Access](results/1-data-structures/list-vs-tuple-access.md), [Dict vs List Membership](results/1-data-structures/dict-vs-list-membership.md), [Set vs List Membership](results/1-data-structures/set-vs-list-membership.md) |
+| 2-string-operations | In Progress | - concatenation_vs_join.py<br>- formatting_methods.py<br>- substring_search.py |
+| 3-function-calls | Planned | - |
+| 4-loops | Planned | - |
+| 5-imports | Backlog | - |
+| 6-exception-handling | Backlog | - |
+| 7-math-operations | Backlog | - |
+| 8-sorting | Backlog | - |
+| 9-io-operations | Backlog | - |
+| 10-multithreading-async | Backlog | - |
+| 11-caching-lookup | Backlog | - |
+| 12-python-internals | Backlog | - |
 
 ## Running Benchmarks
 
-```bash
+```sh
 # Run a specific benchmark
 python benchmarks/category/benchmark-name.py
+```
 
+```sh
 # Example:
 python benchmarks/1-data-structures/list-vs-tuple-access.py
 ```
 
-## Sample Results
+## Results
 
-### Data Structures
+The results documented in this repository were collected on a standardized test environment. However, performance characteristics may vary across different hardware configurations and Python versions. Users are encouraged to run these benchmarks on their own systems to gather data specific to their environment.
 
-#### List vs Tuple Access
-```
-Benchmarking List vs Tuple Access:
-Size       List (s)   Tuple (s)  Ratio
-----------------------------------------
-100        0.013662  0.012261  1.11x
-10000      0.013086  0.012261  1.07x
-1000000    0.012593  0.012743  0.99x
-```
+Future improvements to this project will include tools for collecting and comparing benchmark results across different machines and configurations, enabling more comprehensive performance analysis for specific use cases.
 
+### Result Configurations
+
+| Machine | CPU | RAM | Python Version | OS | Date | Notes |
+|---------|-----|-----|----------------|----|----|-------|
+|[Author](https://github.com/zbuhrer) | Apple M2 | 16 GB  | Python 3.12 | MacOS Sonoma Version 14.5 (23F79) | Feb 2025  | Initial Benchmarking |
+|         |     |     |                |    |    |       |
+|         |     |     |                |    |    |       |
+
+> **Note**: I would like to implement a database-driven solution to better track and compare results across different configurations. This will enable more sophisticated analysis and visualization of performance characteristics across environments.
