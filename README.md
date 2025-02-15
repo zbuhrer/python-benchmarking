@@ -51,20 +51,32 @@ python query_results.py
 
 ## Structure
 
-| Category | Status | Files |
-|----------|--------|-------|
-| 1-data-structures | Implemented | [List vs Tuple Access](benchmarks/results/1-data-structures/list-vs-tuple-access.md), [Dict vs List Membership](benchmarks/results/1-data-structures/dict-vs-list-membership.md), [Set vs List Membership](benchmarks/results/1-data-structures/set-vs-list-membership.md) |
-| 2-string-operations | In Progress | - concatenation_vs_join.py<br>- formatting_methods.py<br>- substring_search.py |
-| 3-function-calls | Planned | - |
-| 4-loops | Planned | - |
-| 5-imports | Backlog | - |
-| 6-exception-handling | Backlog | - |
-| 7-math-operations | Backlog | - |
-| 8-sorting | Backlog | - |
-| 9-io-operations | Backlog | - |
-| 10-multithreading-async | Backlog | - |
-| 11-caching-lookup | Backlog | - |
-| 12-python-internals | Backlog | - |
+```sh
+python-benchmarking/
+├── benchmarks/                     # Main benchmarks directory
+│   ├── 1-data-structures/         # ✓ Implemented
+│   │   ├── dict-vs-list-membership.py
+│   │   ├── list-vs-tuple-access.py
+│   │   └── set-vs-list-membership.py
+│   ├── 2-string-operations/       # 🔄 In Progress
+│   ├── 3-function-calls/          # 📅 Planned
+│   ├── 4-loops/                   # 📅 Planned
+│   ├── 5-imports/                 # ⏳ Backlog
+│   ├── 6-exception-handling/      # ⏳ Backlog
+│   ├── 7-math-operations/         # ⏳ Backlog
+│   ├── 8-sorting/                 # ⏳ Backlog
+│   ├── 9-io-operations/           # ⏳ Backlog
+│   ├── 10-multithreading-async/   # ⏳ Backlog
+│   ├── 11-caching-lookup/         # ⏳ Backlog
+│   ├── 12-python-internals/       # ⏳ Backlog
+│   └── results/                   # Benchmark results in markdown
+│       ├── 1-data-structures/
+│       └── 2-string-operations/
+├── database.py                    # Database initialization and management
+├── main.py                        # Main application entry point
+├── query_results.py              # Tools for querying benchmark results
+└── run_benchmarks.py             # Benchmark execution script
+```
 
 ## Results
 
